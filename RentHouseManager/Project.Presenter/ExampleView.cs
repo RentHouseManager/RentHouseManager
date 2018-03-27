@@ -16,5 +16,13 @@ namespace RentHouseManager
         {
             InitializeComponent();
         }
+
+        //Put controls handler functions here
+        //For Example:
+
+        //public void CheckEmptyTextBox()
+        //{
+
+        //}
     }
 }
