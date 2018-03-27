@@ -66,9 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Project.BLL\AccountService.cs" />
+    <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
     <Compile Include="Project.DAL\DbContext.cs" />
+    <Compile Include="Project.DAL\DbInitializer.cs" />
     <Compile Include="Project.DAL\Models\Account.cs" />
+    <Compile Include="Project.DAL\Models\UserInfo.cs" />
     <Compile Include="Project.Presenter\ExampleView.cs">
       <SubType>Form</SubType>
     </Compile>
