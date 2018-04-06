@@ -1,5 +1,4 @@
-﻿using RentHouseManager.Project.DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,9 +14,6 @@ namespace RentHouseManager
         [STAThread]
         static void Main()
         {
-            DBContext context = new DBContext();
-            DbInitializer.Initialize(context);
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
