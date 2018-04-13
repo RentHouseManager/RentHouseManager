@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RentHouseManagerModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="IDUSER" />
+          </Key>
+          <Property Name="IDUSER" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="USERPASS" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="PRIVILIGES" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BAOCAONGQUANLY">
+          <Key>
+            <PropertyRef Name="IDNGQUANLY" />
+          </Key>
+          <Property Name="IDNGQUANLY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NOIDUNG" Type="nvarchar" MaxLength="2000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BAOCAONGTHUE">
+          <Key>
+            <PropertyRef Name="IDNGTHUE" />
+          </Key>
+          <Property Name="IDNGTHUE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NOIDUNG" Type="nvarchar" MaxLength="2000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHUTRO">
+          <Key>
+            <PropertyRef Name="IDCHUTRO" />
+          </Key>
+          <Property Name="IDCHUTRO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CMND" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NGAYSINH" Type="datetime" Nullable="false" />
+          <Property Name="QUEQUAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DAYTRO">
+          <Key>
+            <PropertyRef Name="IDDAYTRO" />
+          </Key>
+          <Property Name="IDDAYTRO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SOPHONG" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DIACHI" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="IDNGQUANLY" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="DAYTROPHG">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+            <PropertyRef Name="IDDAYTRO" />
+          </Key>
+          <Property Name="IDPHONG" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDDAYTRO" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IDRLSS">
+          <Key>
+            <PropertyRef Name="IDUSER" />
+            <PropertyRef Name="IDPHANQUYEN" />
+          </Key>
+          <Property Name="IDUSER" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDPHANQUYEN" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NGQUANLY">
+          <Key>
+            <PropertyRef Name="IDNGQUANLY" />
+          </Key>
+          <Property Name="IDNGQUANLY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CMND" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NGAYSINH" Type="datetime" Nullable="false" />
+          <Property Name="GIOITINH" Type="nvarchar" MaxLength="3" />
+          <Property Name="QUEQUAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NGTHUE">
+          <Key>
+            <PropertyRef Name="IDNGTHUE" />
+          </Key>
+          <Property Name="IDNGTHUE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CMND" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NGAYSINH" Type="datetime" Nullable="false" />
+          <Property Name="GIOITINH" Type="varchar" MaxLength="3" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHONG">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+          </Key>
+          <Property Name="IDPHONG" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CHATLUONGPHG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIENTICH" Type="float" Nullable="false" />
+          <Property Name="PHONGTRONG" Type="int" Nullable="false" />
+          <Property Name="SONGTOIDA" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QHPHG">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+            <PropertyRef Name="IDNGTHUE" />
+            <PropertyRef Name="IDNGQUANLY" />
+            <PropertyRef Name="IDCHUTRO" />
+            <PropertyRef Name="IDDAYTRO" />
+          </Key>
+          <Property Name="IDPHONG" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDNGTHUE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDNGQUANLY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDCHUTRO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IDDAYTRO" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIEN">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+          </Key>
+          <Property Name="IDPHONG" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TIENPHONG" Type="int" Nullable="false" />
+          <Property Name="TIENDIEN" Type="int" Nullable="false" />
+          <Property Name="TIENINTERNER" Type="int" Nullable="false" />
+          <Property Name="TIENRAC" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__BAOCAONGQ__IDNGQ__25869641">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="BAOCAONGQUANLY" Type="Self.BAOCAONGQUANLY" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="BAOCAONGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BAOCAONGT__IDNGT__286302EC">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="BAOCAONGTHUE" Type="Self.BAOCAONGTHUE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="BAOCAONGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DAYTRO__IDNGQUAN__1A14E395">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="0..1" />
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="DAYTRO">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DAYTROPHG__IDDAY__1FCDBCEB">
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="1" />
+          <End Role="DAYTROPHG" Type="Self.DAYTROPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYTRO">
+              <PropertyRef Name="IDDAYTRO" />
+            </Principal>
+            <Dependent Role="DAYTROPHG">
+              <PropertyRef Name="IDDAYTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DAYTROPHG__IDPHO__1ED998B2">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="DAYTROPHG" Type="Self.DAYTROPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPHONG" />
+            </Principal>
+            <Dependent Role="DAYTROPHG">
+              <PropertyRef Name="IDPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__32E0915F">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__33D4B598">
+          <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUTRO">
+              <PropertyRef Name="IDCHUTRO" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__34C8D9D1">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDUSER__31EC6D26">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDUSER" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDUSER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDCHUTRO__2E1BDC42">
+          <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUTRO">
+              <PropertyRef Name="IDCHUTRO" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDCHUTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDDAYTRO__2F10007B">
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYTRO">
+              <PropertyRef Name="IDDAYTRO" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDDAYTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDNGQUANL__2D27B809">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDNGTHUE__2C3393D0">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDNGTHUE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDPHONG__2B3F6F97">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPHONG" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TIEN__IDPHONG__22AA2996">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="TIEN" Type="Self.TIEN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPHONG" />
+            </Principal>
+            <Dependent Role="TIEN">
+              <PropertyRef Name="IDPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentHouseManagerModelsStoreContainer">
+          <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BAOCAONGQUANLY" EntityType="Self.BAOCAONGQUANLY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BAOCAONGTHUE" EntityType="Self.BAOCAONGTHUE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUTRO" EntityType="Self.CHUTRO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DAYTRO" EntityType="Self.DAYTRO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DAYTROPHG" EntityType="Self.DAYTROPHG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IDRLSS" EntityType="Self.IDRLSS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NGQUANLY" EntityType="Self.NGQUANLY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NGTHUE" EntityType="Self.NGTHUE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QHPHG" EntityType="Self.QHPHG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIEN" EntityType="Self.TIEN" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BAOCAONGQ__IDNGQ__25869641" Association="Self.FK__BAOCAONGQ__IDNGQ__25869641">
+            <End Role="NGQUANLY" EntitySet="NGQUANLY" />
+            <End Role="BAOCAONGQUANLY" EntitySet="BAOCAONGQUANLY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BAOCAONGT__IDNGT__286302EC" Association="Self.FK__BAOCAONGT__IDNGT__286302EC">
+            <End Role="NGTHUE" EntitySet="NGTHUE" />
+            <End Role="BAOCAONGTHUE" EntitySet="BAOCAONGTHUE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__1A14E395" Association="Self.FK__DAYTRO__IDNGQUAN__1A14E395">
+            <End Role="NGQUANLY" EntitySet="NGQUANLY" />
+            <End Role="DAYTRO" EntitySet="DAYTRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DAYTROPHG__IDDAY__1FCDBCEB" Association="Self.FK__DAYTROPHG__IDDAY__1FCDBCEB">
+            <End Role="DAYTRO" EntitySet="DAYTRO" />
+            <End Role="DAYTROPHG" EntitySet="DAYTROPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DAYTROPHG__IDPHO__1ED998B2" Association="Self.FK__DAYTROPHG__IDPHO__1ED998B2">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="DAYTROPHG" EntitySet="DAYTROPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__32E0915F" Association="Self.FK__IDRLSS__IDPHANQU__32E0915F">
+            <End Role="NGQUANLY" EntitySet="NGQUANLY" />
+            <End Role="IDRLSS" EntitySet="IDRLSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__33D4B598" Association="Self.FK__IDRLSS__IDPHANQU__33D4B598">
+            <End Role="CHUTRO" EntitySet="CHUTRO" />
+            <End Role="IDRLSS" EntitySet="IDRLSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__34C8D9D1" Association="Self.FK__IDRLSS__IDPHANQU__34C8D9D1">
+            <End Role="NGTHUE" EntitySet="NGTHUE" />
+            <End Role="IDRLSS" EntitySet="IDRLSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDUSER__31EC6D26" Association="Self.FK__IDRLSS__IDUSER__31EC6D26">
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+            <End Role="IDRLSS" EntitySet="IDRLSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDCHUTRO__2E1BDC42" Association="Self.FK__QHPHG__IDCHUTRO__2E1BDC42">
+            <End Role="CHUTRO" EntitySet="CHUTRO" />
+            <End Role="QHPHG" EntitySet="QHPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDDAYTRO__2F10007B" Association="Self.FK__QHPHG__IDDAYTRO__2F10007B">
+            <End Role="DAYTRO" EntitySet="DAYTRO" />
+            <End Role="QHPHG" EntitySet="QHPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDNGQUANL__2D27B809" Association="Self.FK__QHPHG__IDNGQUANL__2D27B809">
+            <End Role="NGQUANLY" EntitySet="NGQUANLY" />
+            <End Role="QHPHG" EntitySet="QHPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDNGTHUE__2C3393D0" Association="Self.FK__QHPHG__IDNGTHUE__2C3393D0">
+            <End Role="NGTHUE" EntitySet="NGTHUE" />
+            <End Role="QHPHG" EntitySet="QHPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDPHONG__2B3F6F97" Association="Self.FK__QHPHG__IDPHONG__2B3F6F97">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="QHPHG" EntitySet="QHPHG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TIEN__IDPHONG__22AA2996" Association="Self.FK__TIEN__IDPHONG__22AA2996">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="TIEN" EntitySet="TIEN" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RentHouseManagerModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="IDUSER" />
+          </Key>
+          <Property Name="IDUSER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USERPASS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRIVILIGES" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDUSER__31EC6D26" FromRole="ACCOUNT" ToRole="IDRLSS" />
+        </EntityType>
+        <EntityType Name="BAOCAONGQUANLY">
+          <Key>
+            <PropertyRef Name="IDNGQUANLY" />
+          </Key>
+          <Property Name="IDNGQUANLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOIDUNG" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__BAOCAONGQ__IDNGQ__25869641" FromRole="BAOCAONGQUANLY" ToRole="NGQUANLY" />
+        </EntityType>
+        <EntityType Name="BAOCAONGTHUE">
+          <Key>
+            <PropertyRef Name="IDNGTHUE" />
+          </Key>
+          <Property Name="IDNGTHUE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOIDUNG" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__286302EC" FromRole="BAOCAONGTHUE" ToRole="NGTHUE" />
+        </EntityType>
+        <EntityType Name="CHUTRO">
+          <Key>
+            <PropertyRef Name="IDCHUTRO" />
+          </Key>
+          <Property Name="IDCHUTRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOTEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CMND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="QUEQUAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__33D4B598" FromRole="CHUTRO" ToRole="IDRLSS" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDCHUTRO__2E1BDC42" FromRole="CHUTRO" ToRole="QHPHG" />
+        </EntityType>
+        <EntityType Name="DAYTRO">
+          <Key>
+            <PropertyRef Name="IDDAYTRO" />
+          </Key>
+          <Property Name="IDDAYTRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SOPHONG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIACHI" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDNGQUANLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__DAYTRO__IDNGQUAN__1A14E395" FromRole="DAYTRO" ToRole="NGQUANLY" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDDAYTRO__2F10007B" FromRole="DAYTRO" ToRole="QHPHG" />
+          <NavigationProperty Name="PHONGs" Relationship="Self.DAYTROPHG" FromRole="DAYTRO" ToRole="PHONG" />
+        </EntityType>
+        <EntityType Name="IDRLSS">
+          <Key>
+            <PropertyRef Name="IDUSER" />
+            <PropertyRef Name="IDPHANQUYEN" />
+          </Key>
+          <Property Name="IDUSER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDPHANQUYEN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__IDRLSS__IDUSER__31EC6D26" FromRole="IDRLSS" ToRole="ACCOUNT" />
+          <NavigationProperty Name="CHUTRO" Relationship="Self.FK__IDRLSS__IDPHANQU__33D4B598" FromRole="IDRLSS" ToRole="CHUTRO" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__IDRLSS__IDPHANQU__32E0915F" FromRole="IDRLSS" ToRole="NGQUANLY" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__IDRLSS__IDPHANQU__34C8D9D1" FromRole="IDRLSS" ToRole="NGTHUE" />
+        </EntityType>
+        <EntityType Name="NGQUANLY">
+          <Key>
+            <PropertyRef Name="IDNGQUANLY" />
+          </Key>
+          <Property Name="IDNGQUANLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOTEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CMND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GIOITINH" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="QUEQUAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BAOCAONGQUANLY" Relationship="Self.FK__BAOCAONGQ__IDNGQ__25869641" FromRole="NGQUANLY" ToRole="BAOCAONGQUANLY" />
+          <NavigationProperty Name="DAYTROes" Relationship="Self.FK__DAYTRO__IDNGQUAN__1A14E395" FromRole="NGQUANLY" ToRole="DAYTRO" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__32E0915F" FromRole="NGQUANLY" ToRole="IDRLSS" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGQUANL__2D27B809" FromRole="NGQUANLY" ToRole="QHPHG" />
+        </EntityType>
+        <EntityType Name="NGTHUE">
+          <Key>
+            <PropertyRef Name="IDNGTHUE" />
+          </Key>
+          <Property Name="IDNGTHUE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOTEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CMND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GIOITINH" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BAOCAONGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__286302EC" FromRole="NGTHUE" ToRole="BAOCAONGTHUE" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__34C8D9D1" FromRole="NGTHUE" ToRole="IDRLSS" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGTHUE__2C3393D0" FromRole="NGTHUE" ToRole="QHPHG" />
+        </EntityType>
+        <EntityType Name="PHONG">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+          </Key>
+          <Property Name="IDPHONG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CHATLUONGPHG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIENTICH" Type="Double" Nullable="false" />
+          <Property Name="PHONGTRONG" Type="Int32" Nullable="false" />
+          <Property Name="SONGTOIDA" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDPHONG__2B3F6F97" FromRole="PHONG" ToRole="QHPHG" />
+          <NavigationProperty Name="TIEN" Relationship="Self.FK__TIEN__IDPHONG__22AA2996" FromRole="PHONG" ToRole="TIEN" />
+          <NavigationProperty Name="DAYTROes" Relationship="Self.DAYTROPHG" FromRole="PHONG" ToRole="DAYTRO" />
+        </EntityType>
+        <EntityType Name="QHPHG">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+            <PropertyRef Name="IDNGTHUE" />
+            <PropertyRef Name="IDNGQUANLY" />
+            <PropertyRef Name="IDCHUTRO" />
+            <PropertyRef Name="IDDAYTRO" />
+          </Key>
+          <Property Name="IDPHONG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDNGTHUE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDNGQUANLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDCHUTRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDDAYTRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CHUTRO" Relationship="Self.FK__QHPHG__IDCHUTRO__2E1BDC42" FromRole="QHPHG" ToRole="CHUTRO" />
+          <NavigationProperty Name="DAYTRO" Relationship="Self.FK__QHPHG__IDDAYTRO__2F10007B" FromRole="QHPHG" ToRole="DAYTRO" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__QHPHG__IDNGQUANL__2D27B809" FromRole="QHPHG" ToRole="NGQUANLY" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__QHPHG__IDNGTHUE__2C3393D0" FromRole="QHPHG" ToRole="NGTHUE" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK__QHPHG__IDPHONG__2B3F6F97" FromRole="QHPHG" ToRole="PHONG" />
+        </EntityType>
+        <EntityType Name="TIEN">
+          <Key>
+            <PropertyRef Name="IDPHONG" />
+          </Key>
+          <Property Name="IDPHONG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TIENPHONG" Type="Int32" Nullable="false" />
+          <Property Name="TIENDIEN" Type="Int32" Nullable="false" />
+          <Property Name="TIENINTERNER" Type="Int32" Nullable="false" />
+          <Property Name="TIENRAC" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK__TIEN__IDPHONG__22AA2996" FromRole="TIEN" ToRole="PHONG" />
+        </EntityType>
+        <Association Name="FK__IDRLSS__IDUSER__31EC6D26">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDUSER" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDUSER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BAOCAONGQ__IDNGQ__25869641">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="BAOCAONGQUANLY" Type="Self.BAOCAONGQUANLY" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="BAOCAONGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BAOCAONGT__IDNGT__286302EC">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="BAOCAONGTHUE" Type="Self.BAOCAONGTHUE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="BAOCAONGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__33D4B598">
+          <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUTRO">
+              <PropertyRef Name="IDCHUTRO" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDCHUTRO__2E1BDC42">
+          <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUTRO">
+              <PropertyRef Name="IDCHUTRO" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDCHUTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DAYTRO__IDNGQUAN__1A14E395">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="0..1" />
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="DAYTRO">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDDAYTRO__2F10007B">
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYTRO">
+              <PropertyRef Name="IDDAYTRO" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDDAYTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__32E0915F">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IDRLSS__IDPHANQU__34C8D9D1">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="IDRLSS">
+              <PropertyRef Name="IDPHANQUYEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDNGQUANL__2D27B809">
+          <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGQUANLY">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDNGQUANLY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDNGTHUE__2C3393D0">
+          <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGTHUE">
+              <PropertyRef Name="IDNGTHUE" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDNGTHUE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QHPHG__IDPHONG__2B3F6F97">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPHONG" />
+            </Principal>
+            <Dependent Role="QHPHG">
+              <PropertyRef Name="IDPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TIEN__IDPHONG__22AA2996">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="TIEN" Type="Self.TIEN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPHONG" />
+            </Principal>
+            <Dependent Role="TIEN">
+              <PropertyRef Name="IDPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DAYTROPHG">
+          <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="*" />
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="RentHouseManagerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+          <EntitySet Name="BAOCAONGQUANLies" EntityType="Self.BAOCAONGQUANLY" />
+          <EntitySet Name="BAOCAONGTHUEs" EntityType="Self.BAOCAONGTHUE" />
+          <EntitySet Name="CHUTROes" EntityType="Self.CHUTRO" />
+          <EntitySet Name="DAYTROes" EntityType="Self.DAYTRO" />
+          <EntitySet Name="IDRLSSes" EntityType="Self.IDRLSS" />
+          <EntitySet Name="NGQUANLies" EntityType="Self.NGQUANLY" />
+          <EntitySet Name="NGTHUEs" EntityType="Self.NGTHUE" />
+          <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
+          <EntitySet Name="QHPHGs" EntityType="Self.QHPHG" />
+          <EntitySet Name="TIENs" EntityType="Self.TIEN" />
+          <AssociationSet Name="FK__IDRLSS__IDUSER__31EC6D26" Association="Self.FK__IDRLSS__IDUSER__31EC6D26">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="IDRLSS" EntitySet="IDRLSSes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BAOCAONGQ__IDNGQ__25869641" Association="Self.FK__BAOCAONGQ__IDNGQ__25869641">
+            <End Role="NGQUANLY" EntitySet="NGQUANLies" />
+            <End Role="BAOCAONGQUANLY" EntitySet="BAOCAONGQUANLies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BAOCAONGT__IDNGT__286302EC" Association="Self.FK__BAOCAONGT__IDNGT__286302EC">
+            <End Role="NGTHUE" EntitySet="NGTHUEs" />
+            <End Role="BAOCAONGTHUE" EntitySet="BAOCAONGTHUEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__33D4B598" Association="Self.FK__IDRLSS__IDPHANQU__33D4B598">
+            <End Role="CHUTRO" EntitySet="CHUTROes" />
+            <End Role="IDRLSS" EntitySet="IDRLSSes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDCHUTRO__2E1BDC42" Association="Self.FK__QHPHG__IDCHUTRO__2E1BDC42">
+            <End Role="CHUTRO" EntitySet="CHUTROes" />
+            <End Role="QHPHG" EntitySet="QHPHGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__1A14E395" Association="Self.FK__DAYTRO__IDNGQUAN__1A14E395">
+            <End Role="NGQUANLY" EntitySet="NGQUANLies" />
+            <End Role="DAYTRO" EntitySet="DAYTROes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDDAYTRO__2F10007B" Association="Self.FK__QHPHG__IDDAYTRO__2F10007B">
+            <End Role="DAYTRO" EntitySet="DAYTROes" />
+            <End Role="QHPHG" EntitySet="QHPHGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__32E0915F" Association="Self.FK__IDRLSS__IDPHANQU__32E0915F">
+            <End Role="NGQUANLY" EntitySet="NGQUANLies" />
+            <End Role="IDRLSS" EntitySet="IDRLSSes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__34C8D9D1" Association="Self.FK__IDRLSS__IDPHANQU__34C8D9D1">
+            <End Role="NGTHUE" EntitySet="NGTHUEs" />
+            <End Role="IDRLSS" EntitySet="IDRLSSes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDNGQUANL__2D27B809" Association="Self.FK__QHPHG__IDNGQUANL__2D27B809">
+            <End Role="NGQUANLY" EntitySet="NGQUANLies" />
+            <End Role="QHPHG" EntitySet="QHPHGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDNGTHUE__2C3393D0" Association="Self.FK__QHPHG__IDNGTHUE__2C3393D0">
+            <End Role="NGTHUE" EntitySet="NGTHUEs" />
+            <End Role="QHPHG" EntitySet="QHPHGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QHPHG__IDPHONG__2B3F6F97" Association="Self.FK__QHPHG__IDPHONG__2B3F6F97">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="QHPHG" EntitySet="QHPHGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TIEN__IDPHONG__22AA2996" Association="Self.FK__TIEN__IDPHONG__22AA2996">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="TIEN" EntitySet="TIENs" />
+          </AssociationSet>
+          <AssociationSet Name="DAYTROPHG" Association="Self.DAYTROPHG">
+            <End Role="DAYTRO" EntitySet="DAYTROes" />
+            <End Role="PHONG" EntitySet="PHONGs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RentHouseManagerModelsStoreContainer" CdmEntityContainer="RentHouseManagerEntities">
+          <EntitySetMapping Name="ACCOUNTs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.ACCOUNT">
+              <MappingFragment StoreEntitySet="ACCOUNT">
+                <ScalarProperty Name="IDUSER" ColumnName="IDUSER" />
+                <ScalarProperty Name="USERPASS" ColumnName="USERPASS" />
+                <ScalarProperty Name="PRIVILIGES" ColumnName="PRIVILIGES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BAOCAONGQUANLies">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.BAOCAONGQUANLY">
+              <MappingFragment StoreEntitySet="BAOCAONGQUANLY">
+                <ScalarProperty Name="IDNGQUANLY" ColumnName="IDNGQUANLY" />
+                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BAOCAONGTHUEs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.BAOCAONGTHUE">
+              <MappingFragment StoreEntitySet="BAOCAONGTHUE">
+                <ScalarProperty Name="IDNGTHUE" ColumnName="IDNGTHUE" />
+                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUTROes">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.CHUTRO">
+              <MappingFragment StoreEntitySet="CHUTRO">
+                <ScalarProperty Name="IDCHUTRO" ColumnName="IDCHUTRO" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="QUEQUAN" ColumnName="QUEQUAN" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DAYTROes">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.DAYTRO">
+              <MappingFragment StoreEntitySet="DAYTRO">
+                <ScalarProperty Name="IDDAYTRO" ColumnName="IDDAYTRO" />
+                <ScalarProperty Name="SOPHONG" ColumnName="SOPHONG" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+                <ScalarProperty Name="IDNGQUANLY" ColumnName="IDNGQUANLY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IDRLSSes">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.IDRLSS">
+              <MappingFragment StoreEntitySet="IDRLSS">
+                <ScalarProperty Name="IDUSER" ColumnName="IDUSER" />
+                <ScalarProperty Name="IDPHANQUYEN" ColumnName="IDPHANQUYEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NGQUANLies">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.NGQUANLY">
+              <MappingFragment StoreEntitySet="NGQUANLY">
+                <ScalarProperty Name="IDNGQUANLY" ColumnName="IDNGQUANLY" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="QUEQUAN" ColumnName="QUEQUAN" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NGTHUEs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.NGTHUE">
+              <MappingFragment StoreEntitySet="NGTHUE">
+                <ScalarProperty Name="IDNGTHUE" ColumnName="IDNGTHUE" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHONGs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.PHONG">
+              <MappingFragment StoreEntitySet="PHONG">
+                <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+                <ScalarProperty Name="CHATLUONGPHG" ColumnName="CHATLUONGPHG" />
+                <ScalarProperty Name="DIENTICH" ColumnName="DIENTICH" />
+                <ScalarProperty Name="PHONGTRONG" ColumnName="PHONGTRONG" />
+                <ScalarProperty Name="SONGTOIDA" ColumnName="SONGTOIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QHPHGs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.QHPHG">
+              <MappingFragment StoreEntitySet="QHPHG">
+                <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+                <ScalarProperty Name="IDNGTHUE" ColumnName="IDNGTHUE" />
+                <ScalarProperty Name="IDNGQUANLY" ColumnName="IDNGQUANLY" />
+                <ScalarProperty Name="IDCHUTRO" ColumnName="IDCHUTRO" />
+                <ScalarProperty Name="IDDAYTRO" ColumnName="IDDAYTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIENs">
+            <EntityTypeMapping TypeName="RentHouseManagerModels.TIEN">
+              <MappingFragment StoreEntitySet="TIEN">
+                <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+                <ScalarProperty Name="TIENPHONG" ColumnName="TIENPHONG" />
+                <ScalarProperty Name="TIENDIEN" ColumnName="TIENDIEN" />
+                <ScalarProperty Name="TIENINTERNER" ColumnName="TIENINTERNER" />
+                <ScalarProperty Name="TIENRAC" ColumnName="TIENRAC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="DAYTROPHG" TypeName="RentHouseManagerModels.DAYTROPHG" StoreEntitySet="DAYTROPHG">
+            <EndProperty Name="DAYTRO">
+              <ScalarProperty Name="IDDAYTRO" ColumnName="IDDAYTRO" />
+            </EndProperty>
+            <EndProperty Name="PHONG">
+              <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

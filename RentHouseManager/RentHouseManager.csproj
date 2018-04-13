@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,8 +59,8 @@
     <Reference Include="EntityFramework.Toolkit, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.Toolkit.1.0.5\lib\net45\EntityFramework.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.Toolkit.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.Toolkit.Core.1.0.4\lib\net45\EntityFramework.Toolkit.Core.dll</HintPath>
+    <Reference Include="EntityFramework.Toolkit.Core, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Toolkit.Core.1.0.5\lib\net45\EntityFramework.Toolkit.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -54,6 +69,8 @@
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +85,54 @@
     <Compile Include="Project.BLL\AccountService.cs" />
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
+    <Compile Include="Project.DAL\Database\ACCOUNT.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\BAOCAONGQUANLY.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\BAOCAONGTHUE.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\CHUTRO.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\DAYTRO.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\IDRLSS.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\NGQUANLY.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\NGTHUE.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\PHONG.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\QHPHG.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\RentHouseManager.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManager.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\RentHouseManager.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\RentHouseManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManager.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\Database\TIEN.cs">
+      <DependentUpon>RentHouseManager.tt</DependentUpon>
+    </Compile>
     <Compile Include="Project.Presenter\ExampleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +154,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <EntityDeploy Include="Project.DAL\Database\RentHouseManager.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentHouseManager.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Project.DAL\Database\RentHouseManager.edmx.diagram">
+      <DependentUpon>RentHouseManager.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,9 +174,40 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Project.DAL\Database\" />
-    <Folder Include="Project.DAL\Models\" />
+    <Content Include="Project.DAL\Database\RentHouseManager.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentHouseManager.edmx</DependentUpon>
+      <LastGenOutput>RentHouseManager.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Project.DAL\Database\RentHouseManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentHouseManager.edmx</DependentUpon>
+      <LastGenOutput>RentHouseManager.cs</LastGenOutput>
+    </Content>
+    <Content Include="QUANLYNHATRO.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QUANLYNHATRO_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>QUANLYNHATRO.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
