@@ -26,7 +26,7 @@ namespace RentHouseManager.Project.BLL
             return result;
         }
 
-        public ACCOUNT GetAccount(string userName)
+        public ACCOUNT GetOneAccount(string userName)
         {
             ACCOUNT result = new ACCOUNT();
             var account = (from acc in context.ACCOUNTs
