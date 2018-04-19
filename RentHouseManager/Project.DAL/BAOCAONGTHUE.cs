@@ -7,19 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentHouseManager.Project.DAL.Database
+namespace RentHouseManager.Project.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TIEN
+    public partial class BAOCAONGTHUE
     {
-        public string IDPHONG { get; set; }
-        public int TIENPHONG { get; set; }
-        public int TIENDIEN { get; set; }
-        public int TIENINTERNER { get; set; }
-        public int TIENRAC { get; set; }
+        public string IDNGTHUE { get; set; }
+        public string NOIDUNG { get; set; }
     
-        public virtual PHONG PHONG { get; set; }
+        public virtual NGTHUE NGTHUE { get; set; }
     }
 }

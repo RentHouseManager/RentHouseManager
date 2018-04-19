@@ -1,4 +1,4 @@
-﻿using RentHouseManager.Project.DAL.Database;
+﻿using RentHouseManager.Project.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

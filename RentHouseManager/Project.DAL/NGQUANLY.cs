@@ -7,29 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentHouseManager.Project.DAL.Database
+namespace RentHouseManager.Project.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DAYTRO
+    public partial class NGQUANLY
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DAYTRO()
+        public NGQUANLY()
         {
+            this.DAYTROes = new HashSet<DAYTRO>();
+            this.IDRLSSes = new HashSet<IDRLSS>();
             this.QHPHGs = new HashSet<QHPHG>();
-            this.PHONGs = new HashSet<PHONG>();
         }
     
-        public string IDDAYTRO { get; set; }
-        public string SOPHONG { get; set; }
-        public string DIACHI { get; set; }
         public string IDNGQUANLY { get; set; }
+        public string HOTEN { get; set; }
+        public string CMND { get; set; }
+        public System.DateTime NGAYSINH { get; set; }
+        public string GIOITINH { get; set; }
+        public string QUEQUAN { get; set; }
+        public string EMAIL { get; set; }
+        public string SDT { get; set; }
     
-        public virtual NGQUANLY NGQUANLY { get; set; }
+        public virtual BAOCAONGQUANLY BAOCAONGQUANLY { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DAYTRO> DAYTROes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<IDRLSS> IDRLSSes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QHPHG> QHPHGs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHONG> PHONGs { get; set; }
     }
 }

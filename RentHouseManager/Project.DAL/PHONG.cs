@@ -7,32 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentHouseManager.Project.DAL.Database
+namespace RentHouseManager.Project.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NGTHUE
+    public partial class PHONG
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NGTHUE()
+        public PHONG()
         {
-            this.IDRLSSes = new HashSet<IDRLSS>();
             this.QHPHGs = new HashSet<QHPHG>();
+            this.DAYTROes = new HashSet<DAYTRO>();
         }
     
-        public string IDNGTHUE { get; set; }
-        public string HOTEN { get; set; }
-        public string CMND { get; set; }
-        public System.DateTime NGAYSINH { get; set; }
-        public string GIOITINH { get; set; }
-        public string EMAIL { get; set; }
-        public string SDT { get; set; }
+        public string IDPHONG { get; set; }
+        public string CHATLUONGPHG { get; set; }
+        public double DIENTICH { get; set; }
+        public int PHONGTRONG { get; set; }
+        public int SONGTOIDA { get; set; }
     
-        public virtual BAOCAONGTHUE BAOCAONGTHUE { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<IDRLSS> IDRLSSes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QHPHG> QHPHGs { get; set; }
+        public virtual TIEN TIEN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DAYTRO> DAYTROes { get; set; }
     }
 }

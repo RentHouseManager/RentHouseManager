@@ -7,19 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentHouseManager.Project.DAL.Database
+namespace RentHouseManager.Project.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class IDRLSS
+    public partial class BAOCAONGQUANLY
     {
-        public string IDUSER { get; set; }
-        public string IDPHANQUYEN { get; set; }
+        public string IDNGQUANLY { get; set; }
+        public string NOIDUNG { get; set; }
     
-        public virtual ACCOUNT ACCOUNT { get; set; }
-        public virtual CHUTRO CHUTRO { get; set; }
         public virtual NGQUANLY NGQUANLY { get; set; }
-        public virtual NGTHUE NGTHUE { get; set; }
     }
 }

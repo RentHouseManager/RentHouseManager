@@ -135,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BAOCAONGT__IDNGT__286302EC">
+        <Association Name="FK__BAOCAONGT__IDNGT__267ABA7A">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="BAOCAONGTHUE" Type="Self.BAOCAONGTHUE" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAYTRO__IDNGQUAN__1A14E395">
+        <Association Name="FK__DAYTRO__IDNGQUAN__276EDEB3">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="0..1" />
           <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAYTROPHG__IDDAY__1FCDBCEB">
+        <Association Name="FK__DAYTROPHG__IDDAY__286302EC">
           <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="1" />
           <End Role="DAYTROPHG" Type="Self.DAYTROPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAYTROPHG__IDPHO__1ED998B2">
+        <Association Name="FK__DAYTROPHG__IDPHO__29572725">
           <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
           <End Role="DAYTROPHG" Type="Self.DAYTROPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -183,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__32E0915F">
+        <Association Name="FK__IDRLSS__IDPHANQU__2A4B4B5E">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -195,7 +195,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__33D4B598">
+        <Association Name="FK__IDRLSS__IDPHANQU__2B3F6F97">
           <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -207,7 +207,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__34C8D9D1">
+        <Association Name="FK__IDRLSS__IDPHANQU__2C3393D0">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -219,7 +219,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDUSER__31EC6D26">
+        <Association Name="FK__IDRLSS__IDUSER__2D27B809">
           <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -255,7 +255,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDNGQUANL__2D27B809">
+        <Association Name="FK__QHPHG__IDNGQUANL__300424B4">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -267,7 +267,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDNGTHUE__2C3393D0">
+        <Association Name="FK__QHPHG__IDNGTHUE__30F848ED">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -279,7 +279,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDPHONG__2B3F6F97">
+        <Association Name="FK__QHPHG__IDPHONG__31EC6D26">
           <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -291,7 +291,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TIEN__IDPHONG__22AA2996">
+        <Association Name="FK__TIEN__IDPHONG__32E0915F">
           <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
           <End Role="TIEN" Type="Self.TIEN" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -320,35 +320,35 @@
             <End Role="NGQUANLY" EntitySet="NGQUANLY" />
             <End Role="BAOCAONGQUANLY" EntitySet="BAOCAONGQUANLY" />
           </AssociationSet>
-          <AssociationSet Name="FK__BAOCAONGT__IDNGT__286302EC" Association="Self.FK__BAOCAONGT__IDNGT__286302EC">
+          <AssociationSet Name="FK__BAOCAONGT__IDNGT__267ABA7A" Association="Self.FK__BAOCAONGT__IDNGT__267ABA7A">
             <End Role="NGTHUE" EntitySet="NGTHUE" />
             <End Role="BAOCAONGTHUE" EntitySet="BAOCAONGTHUE" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__1A14E395" Association="Self.FK__DAYTRO__IDNGQUAN__1A14E395">
+          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__276EDEB3" Association="Self.FK__DAYTRO__IDNGQUAN__276EDEB3">
             <End Role="NGQUANLY" EntitySet="NGQUANLY" />
             <End Role="DAYTRO" EntitySet="DAYTRO" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAYTROPHG__IDDAY__1FCDBCEB" Association="Self.FK__DAYTROPHG__IDDAY__1FCDBCEB">
+          <AssociationSet Name="FK__DAYTROPHG__IDDAY__286302EC" Association="Self.FK__DAYTROPHG__IDDAY__286302EC">
             <End Role="DAYTRO" EntitySet="DAYTRO" />
             <End Role="DAYTROPHG" EntitySet="DAYTROPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAYTROPHG__IDPHO__1ED998B2" Association="Self.FK__DAYTROPHG__IDPHO__1ED998B2">
+          <AssociationSet Name="FK__DAYTROPHG__IDPHO__29572725" Association="Self.FK__DAYTROPHG__IDPHO__29572725">
             <End Role="PHONG" EntitySet="PHONG" />
             <End Role="DAYTROPHG" EntitySet="DAYTROPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__32E0915F" Association="Self.FK__IDRLSS__IDPHANQU__32E0915F">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2A4B4B5E" Association="Self.FK__IDRLSS__IDPHANQU__2A4B4B5E">
             <End Role="NGQUANLY" EntitySet="NGQUANLY" />
             <End Role="IDRLSS" EntitySet="IDRLSS" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__33D4B598" Association="Self.FK__IDRLSS__IDPHANQU__33D4B598">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2B3F6F97" Association="Self.FK__IDRLSS__IDPHANQU__2B3F6F97">
             <End Role="CHUTRO" EntitySet="CHUTRO" />
             <End Role="IDRLSS" EntitySet="IDRLSS" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__34C8D9D1" Association="Self.FK__IDRLSS__IDPHANQU__34C8D9D1">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2C3393D0" Association="Self.FK__IDRLSS__IDPHANQU__2C3393D0">
             <End Role="NGTHUE" EntitySet="NGTHUE" />
             <End Role="IDRLSS" EntitySet="IDRLSS" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDUSER__31EC6D26" Association="Self.FK__IDRLSS__IDUSER__31EC6D26">
+          <AssociationSet Name="FK__IDRLSS__IDUSER__2D27B809" Association="Self.FK__IDRLSS__IDUSER__2D27B809">
             <End Role="ACCOUNT" EntitySet="ACCOUNT" />
             <End Role="IDRLSS" EntitySet="IDRLSS" />
           </AssociationSet>
@@ -360,19 +360,19 @@
             <End Role="DAYTRO" EntitySet="DAYTRO" />
             <End Role="QHPHG" EntitySet="QHPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDNGQUANL__2D27B809" Association="Self.FK__QHPHG__IDNGQUANL__2D27B809">
+          <AssociationSet Name="FK__QHPHG__IDNGQUANL__300424B4" Association="Self.FK__QHPHG__IDNGQUANL__300424B4">
             <End Role="NGQUANLY" EntitySet="NGQUANLY" />
             <End Role="QHPHG" EntitySet="QHPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDNGTHUE__2C3393D0" Association="Self.FK__QHPHG__IDNGTHUE__2C3393D0">
+          <AssociationSet Name="FK__QHPHG__IDNGTHUE__30F848ED" Association="Self.FK__QHPHG__IDNGTHUE__30F848ED">
             <End Role="NGTHUE" EntitySet="NGTHUE" />
             <End Role="QHPHG" EntitySet="QHPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDPHONG__2B3F6F97" Association="Self.FK__QHPHG__IDPHONG__2B3F6F97">
+          <AssociationSet Name="FK__QHPHG__IDPHONG__31EC6D26" Association="Self.FK__QHPHG__IDPHONG__31EC6D26">
             <End Role="PHONG" EntitySet="PHONG" />
             <End Role="QHPHG" EntitySet="QHPHG" />
           </AssociationSet>
-          <AssociationSet Name="FK__TIEN__IDPHONG__22AA2996" Association="Self.FK__TIEN__IDPHONG__22AA2996">
+          <AssociationSet Name="FK__TIEN__IDPHONG__32E0915F" Association="Self.FK__TIEN__IDPHONG__32E0915F">
             <End Role="PHONG" EntitySet="PHONG" />
             <End Role="TIEN" EntitySet="TIEN" />
           </AssociationSet>
@@ -389,7 +389,7 @@
           <Property Name="IDUSER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="USERPASS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PRIVILIGES" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDUSER__31EC6D26" FromRole="ACCOUNT" ToRole="IDRLSS" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDUSER__2D27B809" FromRole="ACCOUNT" ToRole="IDRLSS" />
         </EntityType>
         <EntityType Name="BAOCAONGQUANLY">
           <Key>
@@ -405,7 +405,7 @@
           </Key>
           <Property Name="IDNGTHUE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NOIDUNG" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__286302EC" FromRole="BAOCAONGTHUE" ToRole="NGTHUE" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__267ABA7A" FromRole="BAOCAONGTHUE" ToRole="NGTHUE" />
         </EntityType>
         <EntityType Name="CHUTRO">
           <Key>
@@ -418,7 +418,7 @@
           <Property Name="QUEQUAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__33D4B598" FromRole="CHUTRO" ToRole="IDRLSS" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__2B3F6F97" FromRole="CHUTRO" ToRole="IDRLSS" />
           <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDCHUTRO__2E1BDC42" FromRole="CHUTRO" ToRole="QHPHG" />
         </EntityType>
         <EntityType Name="DAYTRO">
@@ -429,7 +429,7 @@
           <Property Name="SOPHONG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DIACHI" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IDNGQUANLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__DAYTRO__IDNGQUAN__1A14E395" FromRole="DAYTRO" ToRole="NGQUANLY" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__DAYTRO__IDNGQUAN__276EDEB3" FromRole="DAYTRO" ToRole="NGQUANLY" />
           <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDDAYTRO__2F10007B" FromRole="DAYTRO" ToRole="QHPHG" />
           <NavigationProperty Name="PHONGs" Relationship="Self.DAYTROPHG" FromRole="DAYTRO" ToRole="PHONG" />
         </EntityType>
@@ -440,10 +440,10 @@
           </Key>
           <Property Name="IDUSER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IDPHANQUYEN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__IDRLSS__IDUSER__31EC6D26" FromRole="IDRLSS" ToRole="ACCOUNT" />
-          <NavigationProperty Name="CHUTRO" Relationship="Self.FK__IDRLSS__IDPHANQU__33D4B598" FromRole="IDRLSS" ToRole="CHUTRO" />
-          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__IDRLSS__IDPHANQU__32E0915F" FromRole="IDRLSS" ToRole="NGQUANLY" />
-          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__IDRLSS__IDPHANQU__34C8D9D1" FromRole="IDRLSS" ToRole="NGTHUE" />
+          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__IDRLSS__IDUSER__2D27B809" FromRole="IDRLSS" ToRole="ACCOUNT" />
+          <NavigationProperty Name="CHUTRO" Relationship="Self.FK__IDRLSS__IDPHANQU__2B3F6F97" FromRole="IDRLSS" ToRole="CHUTRO" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__IDRLSS__IDPHANQU__2A4B4B5E" FromRole="IDRLSS" ToRole="NGQUANLY" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__IDRLSS__IDPHANQU__2C3393D0" FromRole="IDRLSS" ToRole="NGTHUE" />
         </EntityType>
         <EntityType Name="NGQUANLY">
           <Key>
@@ -458,9 +458,9 @@
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="BAOCAONGQUANLY" Relationship="Self.FK__BAOCAONGQ__IDNGQ__25869641" FromRole="NGQUANLY" ToRole="BAOCAONGQUANLY" />
-          <NavigationProperty Name="DAYTROes" Relationship="Self.FK__DAYTRO__IDNGQUAN__1A14E395" FromRole="NGQUANLY" ToRole="DAYTRO" />
-          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__32E0915F" FromRole="NGQUANLY" ToRole="IDRLSS" />
-          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGQUANL__2D27B809" FromRole="NGQUANLY" ToRole="QHPHG" />
+          <NavigationProperty Name="DAYTROes" Relationship="Self.FK__DAYTRO__IDNGQUAN__276EDEB3" FromRole="NGQUANLY" ToRole="DAYTRO" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__2A4B4B5E" FromRole="NGQUANLY" ToRole="IDRLSS" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGQUANL__300424B4" FromRole="NGQUANLY" ToRole="QHPHG" />
         </EntityType>
         <EntityType Name="NGTHUE">
           <Key>
@@ -473,9 +473,9 @@
           <Property Name="GIOITINH" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="BAOCAONGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__286302EC" FromRole="NGTHUE" ToRole="BAOCAONGTHUE" />
-          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__34C8D9D1" FromRole="NGTHUE" ToRole="IDRLSS" />
-          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGTHUE__2C3393D0" FromRole="NGTHUE" ToRole="QHPHG" />
+          <NavigationProperty Name="BAOCAONGTHUE" Relationship="Self.FK__BAOCAONGT__IDNGT__267ABA7A" FromRole="NGTHUE" ToRole="BAOCAONGTHUE" />
+          <NavigationProperty Name="IDRLSSes" Relationship="Self.FK__IDRLSS__IDPHANQU__2C3393D0" FromRole="NGTHUE" ToRole="IDRLSS" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDNGTHUE__30F848ED" FromRole="NGTHUE" ToRole="QHPHG" />
         </EntityType>
         <EntityType Name="PHONG">
           <Key>
@@ -486,8 +486,8 @@
           <Property Name="DIENTICH" Type="Double" Nullable="false" />
           <Property Name="PHONGTRONG" Type="Int32" Nullable="false" />
           <Property Name="SONGTOIDA" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDPHONG__2B3F6F97" FromRole="PHONG" ToRole="QHPHG" />
-          <NavigationProperty Name="TIEN" Relationship="Self.FK__TIEN__IDPHONG__22AA2996" FromRole="PHONG" ToRole="TIEN" />
+          <NavigationProperty Name="QHPHGs" Relationship="Self.FK__QHPHG__IDPHONG__31EC6D26" FromRole="PHONG" ToRole="QHPHG" />
+          <NavigationProperty Name="TIEN" Relationship="Self.FK__TIEN__IDPHONG__32E0915F" FromRole="PHONG" ToRole="TIEN" />
           <NavigationProperty Name="DAYTROes" Relationship="Self.DAYTROPHG" FromRole="PHONG" ToRole="DAYTRO" />
         </EntityType>
         <EntityType Name="QHPHG">
@@ -505,9 +505,9 @@
           <Property Name="IDDAYTRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CHUTRO" Relationship="Self.FK__QHPHG__IDCHUTRO__2E1BDC42" FromRole="QHPHG" ToRole="CHUTRO" />
           <NavigationProperty Name="DAYTRO" Relationship="Self.FK__QHPHG__IDDAYTRO__2F10007B" FromRole="QHPHG" ToRole="DAYTRO" />
-          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__QHPHG__IDNGQUANL__2D27B809" FromRole="QHPHG" ToRole="NGQUANLY" />
-          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__QHPHG__IDNGTHUE__2C3393D0" FromRole="QHPHG" ToRole="NGTHUE" />
-          <NavigationProperty Name="PHONG" Relationship="Self.FK__QHPHG__IDPHONG__2B3F6F97" FromRole="QHPHG" ToRole="PHONG" />
+          <NavigationProperty Name="NGQUANLY" Relationship="Self.FK__QHPHG__IDNGQUANL__300424B4" FromRole="QHPHG" ToRole="NGQUANLY" />
+          <NavigationProperty Name="NGTHUE" Relationship="Self.FK__QHPHG__IDNGTHUE__30F848ED" FromRole="QHPHG" ToRole="NGTHUE" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK__QHPHG__IDPHONG__31EC6D26" FromRole="QHPHG" ToRole="PHONG" />
         </EntityType>
         <EntityType Name="TIEN">
           <Key>
@@ -518,9 +518,9 @@
           <Property Name="TIENDIEN" Type="Int32" Nullable="false" />
           <Property Name="TIENINTERNER" Type="Int32" Nullable="false" />
           <Property Name="TIENRAC" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="PHONG" Relationship="Self.FK__TIEN__IDPHONG__22AA2996" FromRole="TIEN" ToRole="PHONG" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK__TIEN__IDPHONG__32E0915F" FromRole="TIEN" ToRole="PHONG" />
         </EntityType>
-        <Association Name="FK__IDRLSS__IDUSER__31EC6D26">
+        <Association Name="FK__IDRLSS__IDUSER__2D27B809">
           <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -544,7 +544,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BAOCAONGT__IDNGT__286302EC">
+        <Association Name="FK__BAOCAONGT__IDNGT__267ABA7A">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="BAOCAONGTHUE" Type="Self.BAOCAONGTHUE" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -556,7 +556,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__33D4B598">
+        <Association Name="FK__IDRLSS__IDPHANQU__2B3F6F97">
           <End Role="CHUTRO" Type="Self.CHUTRO" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -580,7 +580,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DAYTRO__IDNGQUAN__1A14E395">
+        <Association Name="FK__DAYTRO__IDNGQUAN__276EDEB3">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="0..1" />
           <End Role="DAYTRO" Type="Self.DAYTRO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -604,7 +604,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__32E0915F">
+        <Association Name="FK__IDRLSS__IDPHANQU__2A4B4B5E">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -616,7 +616,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__IDRLSS__IDPHANQU__34C8D9D1">
+        <Association Name="FK__IDRLSS__IDPHANQU__2C3393D0">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="IDRLSS" Type="Self.IDRLSS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -628,7 +628,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDNGQUANL__2D27B809">
+        <Association Name="FK__QHPHG__IDNGQUANL__300424B4">
           <End Role="NGQUANLY" Type="Self.NGQUANLY" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -640,7 +640,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDNGTHUE__2C3393D0">
+        <Association Name="FK__QHPHG__IDNGTHUE__30F848ED">
           <End Role="NGTHUE" Type="Self.NGTHUE" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -652,7 +652,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QHPHG__IDPHONG__2B3F6F97">
+        <Association Name="FK__QHPHG__IDPHONG__31EC6D26">
           <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
           <End Role="QHPHG" Type="Self.QHPHG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -664,7 +664,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TIEN__IDPHONG__22AA2996">
+        <Association Name="FK__TIEN__IDPHONG__32E0915F">
           <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
           <End Role="TIEN" Type="Self.TIEN" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -692,7 +692,7 @@
           <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
           <EntitySet Name="QHPHGs" EntityType="Self.QHPHG" />
           <EntitySet Name="TIENs" EntityType="Self.TIEN" />
-          <AssociationSet Name="FK__IDRLSS__IDUSER__31EC6D26" Association="Self.FK__IDRLSS__IDUSER__31EC6D26">
+          <AssociationSet Name="FK__IDRLSS__IDUSER__2D27B809" Association="Self.FK__IDRLSS__IDUSER__2D27B809">
             <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
             <End Role="IDRLSS" EntitySet="IDRLSSes" />
           </AssociationSet>
@@ -700,11 +700,11 @@
             <End Role="NGQUANLY" EntitySet="NGQUANLies" />
             <End Role="BAOCAONGQUANLY" EntitySet="BAOCAONGQUANLies" />
           </AssociationSet>
-          <AssociationSet Name="FK__BAOCAONGT__IDNGT__286302EC" Association="Self.FK__BAOCAONGT__IDNGT__286302EC">
+          <AssociationSet Name="FK__BAOCAONGT__IDNGT__267ABA7A" Association="Self.FK__BAOCAONGT__IDNGT__267ABA7A">
             <End Role="NGTHUE" EntitySet="NGTHUEs" />
             <End Role="BAOCAONGTHUE" EntitySet="BAOCAONGTHUEs" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__33D4B598" Association="Self.FK__IDRLSS__IDPHANQU__33D4B598">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2B3F6F97" Association="Self.FK__IDRLSS__IDPHANQU__2B3F6F97">
             <End Role="CHUTRO" EntitySet="CHUTROes" />
             <End Role="IDRLSS" EntitySet="IDRLSSes" />
           </AssociationSet>
@@ -712,7 +712,7 @@
             <End Role="CHUTRO" EntitySet="CHUTROes" />
             <End Role="QHPHG" EntitySet="QHPHGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__1A14E395" Association="Self.FK__DAYTRO__IDNGQUAN__1A14E395">
+          <AssociationSet Name="FK__DAYTRO__IDNGQUAN__276EDEB3" Association="Self.FK__DAYTRO__IDNGQUAN__276EDEB3">
             <End Role="NGQUANLY" EntitySet="NGQUANLies" />
             <End Role="DAYTRO" EntitySet="DAYTROes" />
           </AssociationSet>
@@ -720,27 +720,27 @@
             <End Role="DAYTRO" EntitySet="DAYTROes" />
             <End Role="QHPHG" EntitySet="QHPHGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__32E0915F" Association="Self.FK__IDRLSS__IDPHANQU__32E0915F">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2A4B4B5E" Association="Self.FK__IDRLSS__IDPHANQU__2A4B4B5E">
             <End Role="NGQUANLY" EntitySet="NGQUANLies" />
             <End Role="IDRLSS" EntitySet="IDRLSSes" />
           </AssociationSet>
-          <AssociationSet Name="FK__IDRLSS__IDPHANQU__34C8D9D1" Association="Self.FK__IDRLSS__IDPHANQU__34C8D9D1">
+          <AssociationSet Name="FK__IDRLSS__IDPHANQU__2C3393D0" Association="Self.FK__IDRLSS__IDPHANQU__2C3393D0">
             <End Role="NGTHUE" EntitySet="NGTHUEs" />
             <End Role="IDRLSS" EntitySet="IDRLSSes" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDNGQUANL__2D27B809" Association="Self.FK__QHPHG__IDNGQUANL__2D27B809">
+          <AssociationSet Name="FK__QHPHG__IDNGQUANL__300424B4" Association="Self.FK__QHPHG__IDNGQUANL__300424B4">
             <End Role="NGQUANLY" EntitySet="NGQUANLies" />
             <End Role="QHPHG" EntitySet="QHPHGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDNGTHUE__2C3393D0" Association="Self.FK__QHPHG__IDNGTHUE__2C3393D0">
+          <AssociationSet Name="FK__QHPHG__IDNGTHUE__30F848ED" Association="Self.FK__QHPHG__IDNGTHUE__30F848ED">
             <End Role="NGTHUE" EntitySet="NGTHUEs" />
             <End Role="QHPHG" EntitySet="QHPHGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__QHPHG__IDPHONG__2B3F6F97" Association="Self.FK__QHPHG__IDPHONG__2B3F6F97">
+          <AssociationSet Name="FK__QHPHG__IDPHONG__31EC6D26" Association="Self.FK__QHPHG__IDPHONG__31EC6D26">
             <End Role="PHONG" EntitySet="PHONGs" />
             <End Role="QHPHG" EntitySet="QHPHGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__TIEN__IDPHONG__22AA2996" Association="Self.FK__TIEN__IDPHONG__22AA2996">
+          <AssociationSet Name="FK__TIEN__IDPHONG__32E0915F" Association="Self.FK__TIEN__IDPHONG__32E0915F">
             <End Role="PHONG" EntitySet="PHONGs" />
             <End Role="TIEN" EntitySet="TIENs" />
           </AssociationSet>

@@ -7,30 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentHouseManager.Project.DAL.Database
+namespace RentHouseManager.Project.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PHONG
+    public partial class ACCOUNT
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PHONG()
+        public ACCOUNT()
         {
-            this.QHPHGs = new HashSet<QHPHG>();
-            this.DAYTROes = new HashSet<DAYTRO>();
+            this.IDRLSSes = new HashSet<IDRLSS>();
         }
     
-        public string IDPHONG { get; set; }
-        public string CHATLUONGPHG { get; set; }
-        public double DIENTICH { get; set; }
-        public int PHONGTRONG { get; set; }
-        public int SONGTOIDA { get; set; }
+        public string IDUSER { get; set; }
+        public string USERPASS { get; set; }
+        public int PRIVILIGES { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<QHPHG> QHPHGs { get; set; }
-        public virtual TIEN TIEN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DAYTRO> DAYTROes { get; set; }
+        public virtual ICollection<IDRLSS> IDRLSSes { get; set; }
     }
 }
