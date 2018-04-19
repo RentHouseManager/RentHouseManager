@@ -85,6 +85,36 @@
     <Compile Include="Project.BLL\AccountService.cs" />
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
+    <Compile Include="Project.DAL\ACCOUNT.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\BAOCAONGQUANLY.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\BAOCAONGTHUE.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\CHUTRO.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\DAYTRO.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\IDRLSS.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\NGQUANLY.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\NGTHUE.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\PHONG.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\QHPHG.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Project.DAL\RentHouseManagerModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\TIEN.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Project.Presenter\ExampleView.cs">
       <SubType>Form</SubType>
@@ -139,7 +172,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -164,6 +199,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Project.DAL\Database\QUANLYNHATRO.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Project.DAL\Database\QUANLYNHATRO_log.ldf">
+      <DependentUpon>QUANLYNHATRO.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Project.DAL\RentHouseManagerModel.Context.tt">
