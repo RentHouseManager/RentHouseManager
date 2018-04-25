@@ -8,21 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentHouseManager
+namespace RentHouseManager.Project.Presenter
 {
-    public partial class Form1 : Form
+    public partial class Formlistroom : Form
     {
-        public Form1()
+        public BorderStyle Fix3D { get; private set; }
+
+        public Formlistroom()
         {
             InitializeComponent();
         }
 
-        //Put controls handler functions here
-        //For Example:
+        private void Formlistroom_Load(object sender, EventArgs e)
+        {
 
-        //public void CheckEmptyTextBox()
-        //{
-
-        //}
+        }
     }
 }
