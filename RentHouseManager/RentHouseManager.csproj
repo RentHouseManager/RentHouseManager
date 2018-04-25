@@ -144,12 +144,21 @@
       <DependentUpon>ExampleView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project.Presenter\FormParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\FormParent.Designer.cs">
+      <DependentUpon>FormParent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Project.Presenter\DangKi.resx">
       <DependentUpon>DangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\ExampleView.resx">
       <DependentUpon>ExampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\FormParent.resx">
+      <DependentUpon>FormParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
