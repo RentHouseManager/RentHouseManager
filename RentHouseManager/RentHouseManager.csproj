@@ -8,9 +8,15 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RentHouseManager</RootNamespace>
     <AssemblyName>RentHouseManager</AssemblyName>
+<<<<<<< HEAD
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+=======
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+>>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +29,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
@@ -86,11 +91,64 @@
   <ItemGroup>
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
+<<<<<<< HEAD
     <Compile Include="Project.Presenter\Formlistroom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Project.Presenter\Formlistroom.Designer.cs">
       <DependentUpon>Formlistroom.cs</DependentUpon>
+=======
+    <Compile Include="Project.DAL\ACCOUNT.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\BAOCAONGQUANLY.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\BAOCAONGTHUE.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\CHUTRO.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\DAYTRO.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\IDRLSS.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\NGQUANLY.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\NGTHUE.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\PHONG.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\QHPHG.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\RentHouseManagerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManagerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\RentHouseManagerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\RentHouseManagerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.DAL\TIEN.cs">
+      <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.Presenter\DangKi.cs">
+      <SubType>Form</SubType>
+>>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     </Compile>
     <Compile Include="Project.Presenter\formlogin.cs">
       <SubType>Form</SubType>
@@ -99,12 +157,29 @@
       <DependentUpon>formlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project.Presenter\FormParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\FormParent.Designer.cs">
+      <DependentUpon>FormParent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Project.Presenter\Formlistroom.resx">
       <DependentUpon>Formlistroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\formlogin.resx">
       <DependentUpon>formlogin.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Project.Presenter\DangKi.resx">
+      <DependentUpon>DangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\ExampleView.resx">
+      <DependentUpon>ExampleView.cs</DependentUpon>
+>>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\FormParent.resx">
+      <DependentUpon>FormParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +192,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+<<<<<<< HEAD
+=======
+    <EntityDeploy Include="Project.DAL\RentHouseManagerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentHouseManagerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Project.DAL\RentHouseManagerModel.edmx.diagram">
+      <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
+    </None>
+>>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,17 +213,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Project.BLL\" />
     <Folder Include="Project.DAL\Database\" />
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
@@ -148,6 +243,25 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Project.DAL\Database\QUANLYNHATRO.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Project.DAL\Database\QUANLYNHATRO_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>QUANLYNHATRO.mdf</DependentUpon>
+    </Content>
+    <Content Include="Project.DAL\RentHouseManagerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
+      <LastGenOutput>RentHouseManagerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Project.DAL\RentHouseManagerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
+      <LastGenOutput>RentHouseManagerModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
