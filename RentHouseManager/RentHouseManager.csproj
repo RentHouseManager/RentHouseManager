@@ -8,11 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RentHouseManager</RootNamespace>
     <AssemblyName>RentHouseManager</AssemblyName>
-<<<<<<< HEAD
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-=======
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
->>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -91,13 +87,12 @@
   <ItemGroup>
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
-<<<<<<< HEAD
     <Compile Include="Project.Presenter\Formlistroom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Project.Presenter\Formlistroom.Designer.cs">
       <DependentUpon>Formlistroom.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Project.DAL\ACCOUNT.cs">
       <DependentUpon>RentHouseManagerModel.tt</DependentUpon>
     </Compile>
@@ -148,7 +143,6 @@
     </Compile>
     <Compile Include="Project.Presenter\DangKi.cs">
       <SubType>Form</SubType>
->>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     </Compile>
     <Compile Include="Project.Presenter\formlogin.cs">
       <SubType>Form</SubType>
@@ -164,19 +158,14 @@
       <DependentUpon>FormParent.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <EmbeddedResource Include="Project.Presenter\Formlistroom.resx">
       <DependentUpon>Formlistroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\formlogin.resx">
       <DependentUpon>formlogin.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\DangKi.resx">
       <DependentUpon>DangKi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Project.Presenter\ExampleView.resx">
-      <DependentUpon>ExampleView.cs</DependentUpon>
->>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\FormParent.resx">
       <DependentUpon>FormParent.cs</DependentUpon>
@@ -192,8 +181,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-<<<<<<< HEAD
-=======
     <EntityDeploy Include="Project.DAL\RentHouseManagerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RentHouseManagerModel.Designer.cs</LastGenOutput>
@@ -201,7 +188,6 @@
     <None Include="Project.DAL\RentHouseManagerModel.edmx.diagram">
       <DependentUpon>RentHouseManagerModel.edmx</DependentUpon>
     </None>
->>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,13 +204,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Folder Include="Project.BLL\" />
-    <Folder Include="Project.DAL\Database\" />
   </ItemGroup>
   <ItemGroup>
-=======
->>>>>>> 646c948848e6fe55c4128743337f6d917c7c1202
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
