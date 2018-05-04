@@ -292,11 +292,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Project.DAL\Database\QUANLYNHATRO.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Project.DAL\Database\QUANLYNHATRO.mdf" />
     <Content Include="Project.DAL\Database\QUANLYNHATRO_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QUANLYNHATRO.mdf</DependentUpon>
     </Content>
     <Content Include="Project.DAL\RentHouseManagerModel.Context.tt">
