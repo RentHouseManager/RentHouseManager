@@ -85,10 +85,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formHeThong.cs">
+    <Compile Include="Project.Presenter\formDanhSachNguoiThue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formHeThong.Designer.cs">
+    <Compile Include="Project.Presenter\formDanhSachNguoiThue.Designer.cs">
+      <DependentUpon>formDanhSachNguoiThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project.Presenter\formHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\formHeThong.Designer.cs">
       <DependentUpon>formHeThong.cs</DependentUpon>
     </Compile>
     <Compile Include="Project.BLL\AccountRepository\DeleteAccountRepository.cs" />
@@ -109,6 +115,18 @@
     <Compile Include="Project.BLL\RoomRepository\InsertRoomRepository.cs" />
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
+    <Compile Include="Project.Presenter\formBoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\formBoss.Designer.cs">
+      <DependentUpon>formBoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project.Presenter\formDanhSachNguoiQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\formDanhSachNguoiQuanLy.Designer.cs">
+      <DependentUpon>formDanhSachNguoiQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Project.Presenter\Formlistroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +191,12 @@
       <DependentUpon>formlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project.Presenter\formNguoiQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Presenter\formNguoiQuanLy.Designer.cs">
+      <DependentUpon>formNguoiQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Project.Presenter\FormParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,8 +204,17 @@
       <DependentUpon>FormParent.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formHeThong.resx">
+    <EmbeddedResource Include="Project.Presenter\formDanhSachNguoiThue.resx">
+      <DependentUpon>formDanhSachNguoiThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\formHeThong.resx">
       <DependentUpon>formHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\formBoss.resx">
+      <DependentUpon>formBoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\formDanhSachNguoiQuanLy.resx">
+      <DependentUpon>formDanhSachNguoiQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\Formlistroom.resx">
       <DependentUpon>Formlistroom.cs</DependentUpon>
@@ -191,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\DangKi.resx">
       <DependentUpon>DangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.Presenter\formNguoiQuanLy.resx">
+      <DependentUpon>formNguoiQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\FormParent.resx">
       <DependentUpon>FormParent.cs</DependentUpon>
