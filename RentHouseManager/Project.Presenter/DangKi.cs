@@ -55,6 +55,8 @@ namespace RentHouseManager.Project.Presenter
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnDki = new System.Windows.Forms.Button();
             this.PanelGioiTinh = new System.Windows.Forms.Panel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -79,8 +81,6 @@ namespace RentHouseManager.Project.Presenter
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.PanelGioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,6 +116,23 @@ namespace RentHouseManager.Project.Presenter
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(600, 514);
             this.panel1.TabIndex = 0;
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.Location = new System.Drawing.Point(275, 357);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(212, 20);
+            this.birthdayPicker.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(10, 358);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Ngày tháng năm sinh";
             // 
             // btnDki
             // 
@@ -212,7 +229,7 @@ namespace RentHouseManager.Project.Presenter
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 329);
+            this.label9.Location = new System.Drawing.Point(12, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 27;
@@ -343,23 +360,6 @@ namespace RentHouseManager.Project.Presenter
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Tên đăng nhập";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 358);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 20);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Ngày tháng năm sinh";
-            // 
-            // birthdayPicker
-            // 
-            this.birthdayPicker.Location = new System.Drawing.Point(275, 357);
-            this.birthdayPicker.Name = "birthdayPicker";
-            this.birthdayPicker.Size = new System.Drawing.Size(212, 20);
-            this.birthdayPicker.TabIndex = 34;
             // 
             // DangKi
             // 
