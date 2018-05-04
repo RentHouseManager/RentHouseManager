@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RentHouseManager.Project.BLL.MotelblockRepository
 {
-    class InfoMotelblockRepository
+    public class InfoMotelblockRepository
     {
     }
 }

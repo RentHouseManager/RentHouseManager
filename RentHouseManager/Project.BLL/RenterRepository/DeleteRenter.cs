@@ -7,20 +7,25 @@ using System.Threading.Tasks;
 
 namespace RentHouseManager.Project.BLL.RenterRepository
 {
-    public class InsertRenterRepository
+    public class DeleteRenter
     {
-        private RentHouseManagerEntities _context = new RentHouseManagerEntities();
-        public bool InsertNewRenter(NGTHUE newRenter)
+        private RentHouseManagerEntities _context;
+        public DeleteRenter()
+        {
+            _context = new RentHouseManagerEntities();
+        }
+
+        public bool DeleteRenterByIdentity(string identity)
         {
             bool result;
-            var searchRenter = _context.NGTHUEs.FirstOrDefault(renter => renter.CMND == newRenter.CMND);
-            if (searchRenter != null)
+            var searchRenter = _context.NGTHUEs.FirstOrDefault(renter => renter.CMND == identity);
+            if (searchRenter == null)
                 result = false;
             else
             {
                 try
                 {
-                    _context.NGTHUEs.Add(newRenter);
+                    _context.NGTHUEs.Remove(searchRenter);
                     _context.SaveChanges();
                     result = true;
                 }

@@ -85,6 +85,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Project.BLL\RenterRepository\DeleteRenter.cs" />
+    <Compile Include="Project.BLL\RenterRepository\GetRenter.cs" />
+    <Compile Include="Project.BLL\RenterRepository\UpdateRenter.cs" />
     <Compile Include="Project.Presenter\formDanhSachNguoiThue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,11 +267,10 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Project.BLL\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RentHouseManager.Project.BLL.ReferenceRepository
 {
-    class InsertReferenceRoom
+    public class InsertReferenceRoom
     {
+
     }
 }

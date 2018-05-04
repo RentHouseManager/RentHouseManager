@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RentHouseManager.Project.BLL.IDRLSSRepository
 {
-    class InsertIDRLSS
+    public class InsertIDRLSS
     {
+        
     }
 }

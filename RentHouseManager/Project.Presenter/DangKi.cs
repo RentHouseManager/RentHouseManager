@@ -1,10 +1,15 @@
-﻿using System;
+﻿using RentHouseManager.Project.BLL.AccountRepository;
+using RentHouseManager.Project.BLL.RenterRepository;
+using RentHouseManager.Project.Common.CommonModels;
+using RentHouseManager.Project.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,16 +29,10 @@ namespace RentHouseManager.Project.Presenter
         private Label label3;
         private TextBox txtMatKhau;
         private Label label2;
-<<<<<<< HEAD
         private TextBox txtTenDN;
         private Button btnDki;
         private Panel PanelGioiTinh;
         private RadioButton radioButton3;
-=======
-        private TextBox textBox1;
-        private Button button1;
-        private Panel panel2;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Label label10;
@@ -41,12 +40,10 @@ namespace RentHouseManager.Project.Presenter
         private TextBox txtQueQuan;
         private TextBox txtSDT;
         private Label label9;
-<<<<<<< HEAD
         private TextBox txtHoTen;
-=======
-        private TextBox textBox5;
         private Button button2;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
+        private DateTimePicker birthdayPicker;
+        private Label label11;
         private Label label1;
     
         public DangKi()
@@ -58,7 +55,6 @@ namespace RentHouseManager.Project.Presenter
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKi));
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.btnDki = new System.Windows.Forms.Button();
             this.PanelGioiTinh = new System.Windows.Forms.Panel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -70,19 +66,6 @@ namespace RentHouseManager.Project.Presenter
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-=======
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -96,31 +79,22 @@ namespace RentHouseManager.Project.Presenter
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
-<<<<<<< HEAD
             this.PanelGioiTinh.SuspendLayout();
-=======
-            this.panel2.SuspendLayout();
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-<<<<<<< HEAD
+            this.panel1.Controls.Add(this.birthdayPicker);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnDki);
             this.panel1.Controls.Add(this.PanelGioiTinh);
             this.panel1.Controls.Add(this.txtCMND);
             this.panel1.Controls.Add(this.txtQueQuan);
             this.panel1.Controls.Add(this.txtSDT);
-=======
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtHoTen);
             this.panel1.Controls.Add(this.label8);
@@ -140,10 +114,9 @@ namespace RentHouseManager.Project.Presenter
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(468, 514);
+            this.panel1.Size = new System.Drawing.Size(600, 514);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< HEAD
             // btnDki
             // 
             this.btnDki.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,7 +135,7 @@ namespace RentHouseManager.Project.Presenter
             this.PanelGioiTinh.Controls.Add(this.radioButton2);
             this.PanelGioiTinh.Controls.Add(this.radioButton1);
             this.PanelGioiTinh.Controls.Add(this.label10);
-            this.PanelGioiTinh.Location = new System.Drawing.Point(109, 375);
+            this.PanelGioiTinh.Location = new System.Drawing.Point(49, 415);
             this.PanelGioiTinh.Name = "PanelGioiTinh";
             this.PanelGioiTinh.Size = new System.Drawing.Size(312, 71);
             this.PanelGioiTinh.TabIndex = 31;
@@ -178,39 +151,6 @@ namespace RentHouseManager.Project.Presenter
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Khác";
             this.radioButton3.UseVisualStyleBackColor = true;
-=======
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(399, 479);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 32);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 73);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Đăng Ký";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(174, 352);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(176, 71);
-            this.panel2.TabIndex = 31;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // radioButton2
             // 
@@ -223,10 +163,7 @@ namespace RentHouseManager.Project.Presenter
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-=======
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // radioButton1
             // 
@@ -250,7 +187,6 @@ namespace RentHouseManager.Project.Presenter
             this.label10.TabIndex = 0;
             this.label10.Text = "Giới tính";
             // 
-<<<<<<< HEAD
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(275, 331);
@@ -271,58 +207,23 @@ namespace RentHouseManager.Project.Presenter
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(212, 20);
             this.txtSDT.TabIndex = 28;
-=======
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(174, 323);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(212, 20);
-            this.textBox8.TabIndex = 30;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(174, 297);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(212, 20);
-            this.textBox7.TabIndex = 29;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(174, 271);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(212, 20);
-            this.textBox6.TabIndex = 28;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label9.Location = new System.Drawing.Point(111, 331);
-=======
-            this.label9.Location = new System.Drawing.Point(10, 323);
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
+            this.label9.Location = new System.Drawing.Point(10, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 27;
             this.label9.Text = "CMND";
             // 
-<<<<<<< HEAD
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(275, 144);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(212, 20);
             this.txtHoTen.TabIndex = 26;
-=======
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(174, 136);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(212, 20);
-            this.textBox5.TabIndex = 26;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label8
             // 
@@ -377,17 +278,10 @@ namespace RentHouseManager.Project.Presenter
             // 
             // txtEmail
             // 
-<<<<<<< HEAD
             this.txtEmail.Location = new System.Drawing.Point(275, 253);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(212, 20);
             this.txtEmail.TabIndex = 20;
-=======
-            this.textBox4.Location = new System.Drawing.Point(174, 245);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 20);
-            this.textBox4.TabIndex = 20;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label4
             // 
@@ -401,17 +295,10 @@ namespace RentHouseManager.Project.Presenter
             // 
             // txtNhapLaiMK
             // 
-<<<<<<< HEAD
             this.txtNhapLaiMK.Location = new System.Drawing.Point(275, 222);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.Size = new System.Drawing.Size(212, 20);
             this.txtNhapLaiMK.TabIndex = 18;
-=======
-            this.textBox3.Location = new System.Drawing.Point(174, 214);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 20);
-            this.textBox3.TabIndex = 18;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label3
             // 
@@ -425,17 +312,10 @@ namespace RentHouseManager.Project.Presenter
             // 
             // txtMatKhau
             // 
-<<<<<<< HEAD
             this.txtMatKhau.Location = new System.Drawing.Point(275, 196);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(212, 20);
             this.txtMatKhau.TabIndex = 16;
-=======
-            this.textBox2.Location = new System.Drawing.Point(174, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 16;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label2
             // 
@@ -449,17 +329,10 @@ namespace RentHouseManager.Project.Presenter
             // 
             // txtTenDN
             // 
-<<<<<<< HEAD
             this.txtTenDN.Location = new System.Drawing.Point(275, 170);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(212, 20);
             this.txtTenDN.TabIndex = 14;
-=======
-            this.textBox1.Location = new System.Drawing.Point(174, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 14;
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             // 
             // label1
             // 
@@ -471,23 +344,35 @@ namespace RentHouseManager.Project.Presenter
             this.label1.TabIndex = 13;
             this.label1.Text = "Tên đăng nhập";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(10, 358);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Ngày tháng năm sinh";
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.Location = new System.Drawing.Point(275, 357);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(212, 20);
+            this.birthdayPicker.TabIndex = 34;
+            // 
             // DangKi
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(468, 514);
+            this.ClientSize = new System.Drawing.Size(600, 514);
             this.Controls.Add(this.panel1);
             this.Name = "DangKi";
             this.Text = "Dang Ky";
             this.Load += new System.EventHandler(this.DangKi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-<<<<<<< HEAD
             this.PanelGioiTinh.ResumeLayout(false);
             this.PanelGioiTinh.PerformLayout();
-=======
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
->>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -503,12 +388,64 @@ namespace RentHouseManager.Project.Presenter
         private void DangKi_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var saveAccountService = new SaveAccountRepository();
+            var insertNewRenterService = new InsertRenterRepository();
+            var newRenter = new NGTHUE();
+            var newAccount = new ACCOUNT();
 
+            newAccount.IDUSER = txtTenDN.Text;
+            newAccount.USERPASS = txtMatKhau.Text;
+            newAccount.PRIVILIGES = AccountType.Renter.GetHashCode();
+
+            newRenter.CMND = txtCMND.Text;
+            newRenter.HOTEN = txtHoTen.Text;
+            newRenter.IDNGTHUE = txtCMND.Text;
+            newRenter.NGAYSINH = birthdayPicker.Value;
+            newRenter.SDT = txtSDT.Text;
+            if (radioButton1.Checked)
+                newRenter.GIOITINH = radioButton1.Text;
+            if (radioButton2.Checked)
+                newRenter.GIOITINH = radioButton2.Text;
+            if (radioButton3.Checked)
+                newRenter.GIOITINH = radioButton3.Text;
+            newRenter.EMAIL = txtEmail.Text;
+
+            var accountResult = saveAccountService.SaveAccount(newAccount);
+            var renterResult = insertNewRenterService.InsertNewRenter(newRenter);
+            if (renterResult == true && accountResult == true)
+            {
+                string printedResult = string.Format("Tạo tài khoản và người thuê thành công. \nThông tin tài khoản:\nUsername: {0} \nPassword: {1}", txtTenDN.Text, txtMatKhau.Text);
+                MessageBox.Show(printedResult, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerifyData()
+        {
+            foreach(Control ctrl in this.Controls)
+            {
+                if(ctrl is TextBox)
+                {
+                    if(ctrl.Text == string.Empty)
+                        ctrl.Text = "Trường này không được để trống";
+                }
+            }
+            if (txtCMND.TextLength > 12)
+                txtCMND.Text = "Số CMND không được vượt quá 12 số";
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(txtEmail.Text);
+            if (!match.Success)
+                txtEmail.Text = "Email không đúng định dạng";
         }
     }
 }
