@@ -30,11 +30,10 @@ namespace RentHouseManager.Project.Presenter
         }
 
         private void khuTrọToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {            
             Formlistroom fm = new Formlistroom();
             fm.MdiParent = this;
-            fm.Show();
-            
+            fm.Show();            
         }
 
         private void FormParent_Load(object sender, EventArgs e)
@@ -42,6 +41,16 @@ namespace RentHouseManager.Project.Presenter
             formHeThong fm = new formHeThong();
             fm.MdiParent = this;
             fm.Show();
+        }
+        private void HIDE()
+        {
+            formHeThong fm = new formHeThong();
+            fm.Hide();
+        }
+
+        private void MenuMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            HIDE();
         }
     }
 }
