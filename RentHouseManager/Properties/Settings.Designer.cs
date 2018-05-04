@@ -12,6 +12,10 @@ namespace RentHouseManager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+<<<<<<< HEAD
+=======
+    <<<<<<< HEAD
+>>>>>>> c83b23d399c68e407fa7fc8733a6b9962a9f5a63
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
