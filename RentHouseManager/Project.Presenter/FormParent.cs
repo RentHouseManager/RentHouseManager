@@ -16,5 +16,32 @@ namespace RentHouseManager.Project.Presenter
         {
             InitializeComponent();
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formlogin fm = new Formlogin();
+            fm.Show();
+        }
+
+        private void khuTrọToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formlistroom fm = new Formlistroom();
+            fm.MdiParent = this;
+            fm.Show();
+            
+        }
+
+        private void FormParent_Load(object sender, EventArgs e)
+        {
+            formHeThong fm = new formHeThong();
+            fm.MdiParent = this;
+            fm.Show();
+        }
     }
 }

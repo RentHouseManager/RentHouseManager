@@ -419,7 +419,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Địa chỉ";
-            this.columnHeader4.Width = 163;
+            this.columnHeader4.Width = 194;
             // 
             // Formlistroom
             // 

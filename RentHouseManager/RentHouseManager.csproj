@@ -214,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Project.BLL\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

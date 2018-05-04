@@ -19,11 +19,17 @@ namespace RentHouseManager
 
         private void formHeThong_Load(object sender, EventArgs e)
         {
-            timerRun.Enabled = true;
-            lbChu.Location = new Point(lbChu.Location.X, lbChu.Location.Y);
-            if(lbChu.Location.X>panel1.Location.X||lbChu.Location.X<=0)
+            timerRun.Enabled = true;     
+            
+        }
+
+        int i = 10;
+        private void timerRun_Tick(object sender, EventArgs e)
+        {
+            lbChu.Location = new Point(lbChu.Location.X + i, lbChu.Location.Y);
+            if(lbChu.Location.X>795||lbChu.Location.Y<=0)
             {
-                lbChu.Location = new Point(lbChu.Location.X - panel1.Location.X, lbChu.Location.Y);
+                lbChu.Location = new Point(lbChu.Location.X - 795);
             }
         }
     }

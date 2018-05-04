@@ -17,12 +17,10 @@ namespace RentHouseManager.Project.Presenter
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void dangnhapBtn_Click(object sender, EventArgs e)
         {
 
         }
-
-        
 
         //Put controls handler functions here
         //For Example:
