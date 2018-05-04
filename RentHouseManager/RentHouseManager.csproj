@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RentHouseManager</RootNamespace>
     <AssemblyName>RentHouseManager</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -97,6 +97,22 @@
     <Compile Include="Project.Presenter\formHeThong.Designer.cs">
       <DependentUpon>formHeThong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Project.BLL\AccountRepository\DeleteAccountRepository.cs" />
+    <Compile Include="Project.BLL\AccountRepository\GetAccountRepository.cs" />
+    <Compile Include="Project.BLL\AccountRepository\InsertAccountRepository.cs" />
+    <Compile Include="Project.BLL\AccountRepository\SaveAccountRepository.cs" />
+    <Compile Include="Project.BLL\AccountRepository\UpdateAccountRepository.cs" />
+    <Compile Include="Project.BLL\HostRepository\InsertHostRepository.cs" />
+    <Compile Include="Project.BLL\IDRLSSRepository\InsertIDRLSS.cs" />
+    <Compile Include="Project.BLL\ManagerRepository\InsertManagerRepository.cs" />
+    <Compile Include="Project.BLL\ReportManageRepository\InsertManagerRepository.cs" />
+    <Compile Include="Project.BLL\MotelblockRepository\InfoMotelblockRepository.cs" />
+    <Compile Include="Project.BLL\MotelRepository\InsertMotelRepository.cs" />
+    <Compile Include="Project.BLL\ReferenceRepository\InsertReferenceRoom.cs" />
+    <Compile Include="Project.BLL\RentalRepository\InsertRentalRepository.cs" />
+    <Compile Include="Project.BLL\RenterRepository\InsertRenterRepository.cs" />
+    <Compile Include="Project.BLL\ReportRenterRepository\InsertReportRenterRepository.cs" />
+    <Compile Include="Project.BLL\RoomRepository\InsertRoomRepository.cs" />
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
     <Compile Include="Project.Presenter\formBoss.cs">
@@ -248,10 +264,14 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+<<<<<<< HEAD
+  <ItemGroup />
+=======
   <ItemGroup>
     <Folder Include="Project.BLL\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
+>>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
