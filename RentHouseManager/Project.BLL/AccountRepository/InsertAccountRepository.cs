@@ -8,6 +8,6 @@ namespace RentHouseManager.Project.BLL.AccountRepository
 {
     class InsertAccountRepository
     {
-   
+        
     }
 }
