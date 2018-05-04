@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHeThong.Designer.cs">
+      <DependentUpon>formHeThong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Project.Common\CommonModels\AccountType.cs" />
     <Compile Include="Project.Common\Helpers.cs" />
     <Compile Include="Project.Presenter\Formlistroom.cs">
@@ -158,6 +164,9 @@
       <DependentUpon>FormParent.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formHeThong.resx">
+      <DependentUpon>formHeThong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Project.Presenter\Formlistroom.resx">
       <DependentUpon>Formlistroom.cs</DependentUpon>
     </EmbeddedResource>
