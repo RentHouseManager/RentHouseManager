@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentHouseManager
+namespace RentHouseManager.Project.Presenter
 {
     public partial class Formlogin : Form
     {
@@ -17,12 +17,10 @@ namespace RentHouseManager
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void dangnhapBtn_Click(object sender, EventArgs e)
         {
 
         }
-
-        
 
         //Put controls handler functions here
         //For Example:

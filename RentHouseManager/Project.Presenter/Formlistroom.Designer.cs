@@ -386,6 +386,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(860, 553);
             this.panel1.TabIndex = 3;
+            this.panel1.TabStop = true;
             // 
             // listView1
             // 
@@ -419,7 +420,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Địa chỉ";
-            this.columnHeader4.Width = 163;
+            this.columnHeader4.Width = 194;
             // 
             // Formlistroom
             // 
@@ -428,6 +429,7 @@
             this.ClientSize = new System.Drawing.Size(860, 553);
             this.Controls.Add(this.panel1);
             this.Name = "Formlistroom";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Formlistroom_Load);
             this.thanhcongcupNl.ResumeLayout(false);
             this.thanhcongcupNl.PerformLayout();

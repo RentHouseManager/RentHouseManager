@@ -17,7 +17,7 @@ namespace RentHouseManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formlogin());
+            Application.Run(new FormParent());
         }
     }
 }

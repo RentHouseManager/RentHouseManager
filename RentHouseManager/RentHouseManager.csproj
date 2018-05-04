@@ -228,7 +228,14 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
+=======
+  <ItemGroup>
+    <Folder Include="Project.BLL\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+>>>>>>> b684aacad9cc7c8bd69bbc8b8bb23c93c2ead168
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

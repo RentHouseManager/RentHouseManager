@@ -1,4 +1,4 @@
-﻿namespace RentHouseManager
+﻿namespace RentHouseManager.Project.Presenter
 {
     partial class Formlogin
     {
@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.typeLbl = new System.Windows.Forms.Label();
             this.quanlivienRadiobtn = new System.Windows.Forms.RadioButton();
-            this.khachRadiobtn = new System.Windows.Forms.RadioButton();
             this.nguoiquanliRadiobtn = new System.Windows.Forms.RadioButton();
             this.dangnhapLbl = new System.Windows.Forms.Label();
             this.dangnhapBtn = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.usernameLbl = new System.Windows.Forms.Label();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.loginpic = new System.Windows.Forms.PictureBox();
+            this.khachRadiobtn = new System.Windows.Forms.RadioButton();
             this.loginPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginpic)).BeginInit();
@@ -73,7 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 119);
             this.panel1.TabIndex = 16;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // typeLbl
             // 
@@ -84,7 +83,6 @@
             this.typeLbl.Size = new System.Drawing.Size(171, 20);
             this.typeLbl.TabIndex = 14;
             this.typeLbl.Text = "Đăng nhập với tư cách:";
-            //this.typeLbl.Click += new System.EventHandler(this.typelBl_Click);
             // 
             // quanlivienRadiobtn
             // 
@@ -96,19 +94,6 @@
             this.quanlivienRadiobtn.TabStop = true;
             this.quanlivienRadiobtn.Text = "Quản trị viên";
             this.quanlivienRadiobtn.UseVisualStyleBackColor = true;
-            //this.quanlivienRadiobtn.CheckedChanged += new System.EventHandler(this.quanlivienradiobtn_CheckedChanged);
-            // 
-            // khachRadiobtn
-            // 
-            this.khachRadiobtn.AutoSize = true;
-            this.khachRadiobtn.Location = new System.Drawing.Point(7, 99);
-            this.khachRadiobtn.Name = "khachRadiobtn";
-            this.khachRadiobtn.Size = new System.Drawing.Size(56, 17);
-            this.khachRadiobtn.TabIndex = 12;
-            this.khachRadiobtn.TabStop = true;
-            this.khachRadiobtn.Text = "Khách";
-            this.khachRadiobtn.UseVisualStyleBackColor = true;
-            //this.khachRadiobtn.CheckedChanged += new System.EventHandler(this.khachradiobtn_CheckedChanged);
             // 
             // nguoiquanliRadiobtn
             // 
@@ -120,7 +105,6 @@
             this.nguoiquanliRadiobtn.TabStop = true;
             this.nguoiquanliRadiobtn.Text = "Người quản lí";
             this.nguoiquanliRadiobtn.UseVisualStyleBackColor = true;
-            //this.nguoiquanliRadiobtn.CheckedChanged += new System.EventHandler(this.nguoiquanliradiobtn_CheckedChanged);
             // 
             // dangnhapLbl
             // 
@@ -132,18 +116,17 @@
             this.dangnhapLbl.Size = new System.Drawing.Size(185, 31);
             this.dangnhapLbl.TabIndex = 15;
             this.dangnhapLbl.Text = "ĐĂNG NHẬP";
-            //this.dangnhapLbl.Click += new System.EventHandler(this.dangnhaplBl_Click);
             // 
             // dangnhapBtn
             // 
             this.dangnhapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dangnhapBtn.Location = new System.Drawing.Point(364, 256);
+            this.dangnhapBtn.Location = new System.Drawing.Point(364, 242);
             this.dangnhapBtn.Name = "dangnhapBtn";
             this.dangnhapBtn.Size = new System.Drawing.Size(119, 49);
             this.dangnhapBtn.TabIndex = 10;
             this.dangnhapBtn.Text = "Đăng nhập";
             this.dangnhapBtn.UseVisualStyleBackColor = true;
-            //this.dangnhapBtn.Click += new System.EventHandler(this.dangnhapbtn_Click);
+            this.dangnhapBtn.Click += new System.EventHandler(this.dangnhapBtn_Click);
             // 
             // passwordTxt
             // 
@@ -152,7 +135,6 @@
             this.passwordTxt.Size = new System.Drawing.Size(186, 20);
             this.passwordTxt.TabIndex = 9;
             this.passwordTxt.UseSystemPasswordChar = true;
-            //this.passwordTxt.TextChanged += new System.EventHandler(this.matkhautXt_TextChanged);
             // 
             // passwordLbl
             // 
@@ -163,7 +145,6 @@
             this.passwordLbl.Size = new System.Drawing.Size(69, 18);
             this.passwordLbl.TabIndex = 8;
             this.passwordLbl.Text = "Mật khẩu";
-            //this.passwordLbl.Click += new System.EventHandler(this.passwordlBl_Click);
             // 
             // usernameLbl
             // 
@@ -174,7 +155,6 @@
             this.usernameLbl.Size = new System.Drawing.Size(105, 18);
             this.usernameLbl.TabIndex = 7;
             this.usernameLbl.Text = "Tên đăng nhập";
-            //this.usernameLbl.Click += new System.EventHandler(this.usernamelBl_Click);
             // 
             // usernameTxt
             // 
@@ -182,7 +162,6 @@
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(186, 20);
             this.usernameTxt.TabIndex = 6;
-            //this.usernameTxt.TextChanged += new System.EventHandler(this.usernametXt_TextChanged);
             // 
             // loginpic
             // 
@@ -193,7 +172,17 @@
             this.loginpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.loginpic.TabIndex = 5;
             this.loginpic.TabStop = false;
-            //this.loginpic.Click += new System.EventHandler(this.loginpic_Click);
+            // 
+            // khachRadiobtn
+            // 
+            this.khachRadiobtn.AutoSize = true;
+            this.khachRadiobtn.Location = new System.Drawing.Point(7, 99);
+            this.khachRadiobtn.Name = "khachRadiobtn";
+            this.khachRadiobtn.Size = new System.Drawing.Size(56, 17);
+            this.khachRadiobtn.TabIndex = 12;
+            this.khachRadiobtn.TabStop = true;
+            this.khachRadiobtn.Text = "Khách";
+            this.khachRadiobtn.UseVisualStyleBackColor = true;
             // 
             // Formlogin
             // 
@@ -203,7 +192,6 @@
             this.Controls.Add(this.loginPanel);
             this.Name = "Formlogin";
             this.Text = "Đăng nhập";
-            //this.Load += new System.EventHandler(this.Formdangnhap_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -218,7 +206,6 @@
         private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.Label typeLbl;
         private System.Windows.Forms.RadioButton quanlivienRadiobtn;
-        private System.Windows.Forms.RadioButton khachRadiobtn;
         private System.Windows.Forms.RadioButton nguoiquanliRadiobtn;
         private System.Windows.Forms.Button dangnhapBtn;
         private System.Windows.Forms.TextBox passwordTxt;
@@ -228,6 +215,7 @@
         private System.Windows.Forms.PictureBox loginpic;
         private System.Windows.Forms.Label dangnhapLbl;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton khachRadiobtn;
     }
 }
 
