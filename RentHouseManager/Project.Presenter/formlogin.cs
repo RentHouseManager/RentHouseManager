@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentHouseManager
+namespace RentHouseManager.Project.Presenter
 {
     public partial class Formlogin : Form
     {

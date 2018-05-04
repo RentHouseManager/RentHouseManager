@@ -1,4 +1,4 @@
-﻿namespace RentHouseManager
+﻿namespace RentHouseManager.Project.Presenter
 {
     partial class Formlogin
     {
