@@ -5,20 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentHouseManager.Project.BLL.AccountRepository
+namespace RentHouseManager.Project.BLL.RenterRepository
 {
-    public class DeleteAccountRepository
+    public class UpdateRenter
     {
-        private RentHouseManagerEntities _context = new RentHouseManagerEntities();
-        public bool DeleteAccountByName(string userName)
+        private RentHouseManagerEntities _context;
+
+        public UpdateRenter()
+        {
+            _context = new RentHouseManagerEntities();
+        }
+
+        public bool UpdateRenterByIdentity(NGTHUE updateInfo)
         {
             bool result;
-            var searchUser = _context.ACCOUNTs.FirstOrDefault(acc => acc.IDUSER == userName);
-            if (searchUser != null)
+            var searchRenter = _context.NGTHUEs.FirstOrDefault(renter => renter.CMND == updateInfo.CMND);
+            if (searchRenter == null)
             {
                 try
                 {
-                    _context.ACCOUNTs.Remove(searchUser);
+                    searchRenter = updateInfo;
                     _context.SaveChanges();
                     result = true;
                 }
@@ -28,8 +34,8 @@ namespace RentHouseManager.Project.BLL.AccountRepository
                     throw e;
                 }
             }
-            else
-                result = false;
+            else result = false;
+
             return result;
         }
     }

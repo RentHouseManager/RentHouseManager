@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RentHouseManager.Project.BLL.AccountRepository
 {
-    class UpdateAccountRepository
+    public class UpdateAccountRepository
     {
+
     }
 }

@@ -1,10 +1,15 @@
-﻿using System;
+﻿using RentHouseManager.Project.BLL.AccountRepository;
+using RentHouseManager.Project.BLL.RenterRepository;
+using RentHouseManager.Project.Common.CommonModels;
+using RentHouseManager.Project.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,6 +41,9 @@ namespace RentHouseManager.Project.Presenter
         private TextBox txtSDT;
         private Label label9;
         private TextBox txtHoTen;
+        private Button button2;
+        private DateTimePicker birthdayPicker;
+        private Label label11;
         private Label label1;
     
         public DangKi()
@@ -47,6 +55,8 @@ namespace RentHouseManager.Project.Presenter
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnDki = new System.Windows.Forms.Button();
             this.PanelGioiTinh = new System.Windows.Forms.Panel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -78,6 +88,8 @@ namespace RentHouseManager.Project.Presenter
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.birthdayPicker);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnDki);
             this.panel1.Controls.Add(this.PanelGioiTinh);
             this.panel1.Controls.Add(this.txtCMND);
@@ -102,8 +114,25 @@ namespace RentHouseManager.Project.Presenter
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(468, 514);
+            this.panel1.Size = new System.Drawing.Size(600, 514);
             this.panel1.TabIndex = 0;
+            // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.Location = new System.Drawing.Point(275, 357);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(212, 20);
+            this.birthdayPicker.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(10, 358);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Ngày tháng năm sinh";
             // 
             // btnDki
             // 
@@ -123,7 +152,7 @@ namespace RentHouseManager.Project.Presenter
             this.PanelGioiTinh.Controls.Add(this.radioButton2);
             this.PanelGioiTinh.Controls.Add(this.radioButton1);
             this.PanelGioiTinh.Controls.Add(this.label10);
-            this.PanelGioiTinh.Location = new System.Drawing.Point(109, 375);
+            this.PanelGioiTinh.Location = new System.Drawing.Point(49, 415);
             this.PanelGioiTinh.Name = "PanelGioiTinh";
             this.PanelGioiTinh.Size = new System.Drawing.Size(312, 71);
             this.PanelGioiTinh.TabIndex = 31;
@@ -151,6 +180,7 @@ namespace RentHouseManager.Project.Presenter
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -199,7 +229,7 @@ namespace RentHouseManager.Project.Presenter
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(111, 331);
+            this.label9.Location = new System.Drawing.Point(12, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 27;
@@ -334,7 +364,7 @@ namespace RentHouseManager.Project.Presenter
             // DangKi
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(468, 514);
+            this.ClientSize = new System.Drawing.Size(600, 514);
             this.Controls.Add(this.panel1);
             this.Name = "DangKi";
             this.Text = "Dang Ky";
@@ -358,12 +388,64 @@ namespace RentHouseManager.Project.Presenter
         private void DangKi_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var saveAccountService = new SaveAccountRepository();
+            var insertNewRenterService = new InsertRenterRepository();
+            var newRenter = new NGTHUE();
+            var newAccount = new ACCOUNT();
 
+            newAccount.IDUSER = txtTenDN.Text;
+            newAccount.USERPASS = txtMatKhau.Text;
+            newAccount.PRIVILIGES = AccountType.Renter.GetHashCode();
+
+            newRenter.CMND = txtCMND.Text;
+            newRenter.HOTEN = txtHoTen.Text;
+            newRenter.IDNGTHUE = txtCMND.Text;
+            newRenter.NGAYSINH = birthdayPicker.Value;
+            newRenter.SDT = txtSDT.Text;
+            if (radioButton1.Checked)
+                newRenter.GIOITINH = radioButton1.Text;
+            if (radioButton2.Checked)
+                newRenter.GIOITINH = radioButton2.Text;
+            if (radioButton3.Checked)
+                newRenter.GIOITINH = radioButton3.Text;
+            newRenter.EMAIL = txtEmail.Text;
+
+            var accountResult = saveAccountService.SaveAccount(newAccount);
+            var renterResult = insertNewRenterService.InsertNewRenter(newRenter);
+            if (renterResult == true && accountResult == true)
+            {
+                string printedResult = string.Format("Tạo tài khoản và người thuê thành công. \nThông tin tài khoản:\nUsername: {0} \nPassword: {1}", txtTenDN.Text, txtMatKhau.Text);
+                MessageBox.Show(printedResult, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerifyData()
+        {
+            foreach(Control ctrl in this.Controls)
+            {
+                if(ctrl is TextBox)
+                {
+                    if(ctrl.Text == string.Empty)
+                        ctrl.Text = "Trường này không được để trống";
+                }
+            }
+            if (txtCMND.TextLength > 12)
+                txtCMND.Text = "Số CMND không được vượt quá 12 số";
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(txtEmail.Text);
+            if (!match.Success)
+                txtEmail.Text = "Email không đúng định dạng";
         }
     }
 }
