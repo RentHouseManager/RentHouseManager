@@ -19,7 +19,9 @@ namespace RentHouseManager.Project.Presenter
 
         private void dangnhapBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            formBoss fm = new formBoss();
+            fm.Show();
         }
 
         //Put controls handler functions here
