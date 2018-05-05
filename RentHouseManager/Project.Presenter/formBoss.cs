@@ -19,7 +19,14 @@ namespace RentHouseManager.Project.Presenter
 
         private void dãyTrọToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Formlistroom fmm = new Formlistroom();
+            fmm.MdiParent = this;
+            fmm.Show();
+        }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
